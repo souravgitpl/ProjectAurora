@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.aurora'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.2'
+    implementation 'io.springfox:springfox-swagger2:3.0.0'
+    implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.14.2'
+    implementation 'joda-time:joda-time:2.10.5'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.1.2'
+    implementation 'net.snowflake:snowflake-jdbc:3.13.33'
+    implementation 'name.remal.gradle-plugins.lombok:lombok:2.2.1'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation 'commons-lang:commons-lang:2.1'
+    implementation 'hsqldb:hsqldb:1.8.0.10'
+    implementation 'org.mockito:mockito-core:5.4.0'
+    implementation 'com.sporniket.spring-test-dbunit:spring-test-dbunit-test:5.2.1'
+}
+
+test {
+    useJUnitPlatform()
+}
